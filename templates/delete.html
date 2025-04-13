@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ลบข้อมูลผู้ป่วย</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>ยืนยันการลบข้อมูลผู้ป่วย</h1>
+    <p>คุณต้องการลบข้อมูลผู้ป่วย ID: {{ patient_id }} ใช่หรือไม่?</p>
+    
+    <form method="POST">
+        <button type="submit">ลบข้อมูล</button>
+        <a href="/">ยกเลิก</a>
+    </form>
+</body>
+</html>

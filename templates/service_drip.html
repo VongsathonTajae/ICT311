@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}ดริปวิตามินผิว - TBL Clinic{% endblock %}
+
+{% block content %}
+
+<!-- แบนเนอร์ (Banner) -->
+<section class="banner">
+    <h1>ยกกระชับทุกระดับชั้นผิว</h1>
+    <p>ทุกการรักษา เราพร้อมดูแลด้วยทีมแพทย์ผู้เชี่ยวชาญ</p>
+    <a href="/insert" class="appointment-btn">จองคิวตอนนี้</a>
+</section>
+
+<!-- รายละเอียดบริการ: ดริปวิตามินผิว -->
+<section class="service-detail-section">
+    <div class="service-detail-container">
+        <h2>ดริปวิตามินผิว</h2>
+        <p class="service-detail-subtext">เติมสารอาหารสู่ผิวจากภายใน เพื่อความกระจ่างใส สุขภาพดีอย่างเป็นธรรมชาติ</p>
+        <img src="{{ url_for('static', filename='images/service_drip.jpg') }}" alt="ดริปวิตามินผิว" class="service-image">
+        <p class="service-description">
+            ฟื้นฟูผิวจากภายใน เสริมภูมิคุ้มกัน คืนความกระจ่างใสให้ผิวด้วยการดริปวิตามินเข้มข้นเข้าสู่ร่างกายโดยตรง
+            เหมาะสำหรับผู้ที่ต้องการฟื้นฟูสภาพผิว เหนื่อยล้าง่าย หรือพักผ่อนน้อย
+        </p>
+        <p class="service-price">ราคาเริ่มต้น: <strong>1,990 บาท</strong></p>
+        <a href="/services" class="back-link">← กลับไปหน้าบริการทั้งหมด</a>
+    </div>
+</section>
+
+{% endblock %}

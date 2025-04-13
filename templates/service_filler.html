@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}ฉีดฟิลเลอร์ - TBL Clinic{% endblock %}
+
+{% block content %}
+
+<!-- แบนเนอร์ (Banner) -->
+<section class="banner">
+    <h1>ยกกระชับทุกระดับชั้นผิว</h1>
+    <p>ทุกการรักษา เราพร้อมดูแลด้วยทีมแพทย์ผู้เชี่ยวชาญ</p>
+    <a href="/insert" class="appointment-btn">จองคิวตอนนี้</a>
+</section>
+
+<!-- รายละเอียดบริการ: ฉีดฟิลเลอร์ -->
+<section class="service-detail-section">
+    <div class="service-detail-container">
+        <h2>ฉีดฟิลเลอร์</h2>
+        <p class="service-detail-subtext">เติมเต็มใบหน้าให้ได้รูป เสริมมิติอย่างเป็นธรรมชาติและปลอดภัย</p>
+        <img src="{{ url_for('static', filename='images/service_filler.jpg') }}" alt="ฉีดฟิลเลอร์" class="service-image">
+        <p class="service-description">
+            เติมเต็มร่องลึก ปรับรูปหน้าให้ดูอ่อนเยาว์อย่างเป็นธรรมชาติ ด้วยฟิลเลอร์คุณภาพสูง 
+            เหมาะสำหรับผู้ที่ต้องการลดเลือนริ้วรอย เสริมคาง ร่องแก้ม ใต้ตา หรือเติมเต็มปริมาณเนื้อบริเวณใบหน้าให้ดูสมส่วนขึ้น 
+            โดยแพทย์ผู้เชี่ยวชาญที่มีประสบการณ์และเทคนิคเฉพา
+        </p>
+        <p class="service-price">ราคาเริ่มต้น: <strong>1,990 บาท</strong></p>
+        <a href="/services" class="back-link">← กลับไปหน้าบริการทั้งหมด</a>
+    </div>
+</section>
+
+{% endblock %}

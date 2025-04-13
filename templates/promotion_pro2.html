@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}TBL Treatment - TBL Clinic{% endblock %}
+
+{% block content %}
+
+<!-- แบนเนอร์ (Banner) -->
+<section class="banner">
+    <h1>ยกกระชับทุกระดับชั้นผิว</h1>
+    <p>ทุกการรักษา เราพร้อมดูแลด้วยทีมแพทย์ผู้เชี่ยวชาญ</p>
+    <a href="/insert" class="appointment-btn">จองคิวตอนนี้</a>
+</section>
+
+<!-- รายละเอียดบริการ: TBL Treatment -->
+<section class="service-detail-section">
+    <div class="service-detail-container">
+        <h2>TBL Treatment</h2>
+        <p class="service-detail-subtext">เผยผิวใสขั้นสุด กับทุกขั้นตอนทรีทเม้นท์ ดูแลโดยผู้เชี่ยวชาญพร้อมรับความสวยอย่างมั่นใจ</p>
+        <img src="{{ url_for('static', filename='images/Pro2.jpg') }}" alt="TBL Treatment" class="service-image">
+        <p class="service-description">
+            ยกระดับการดูแลผิวหน้าด้วยโปรแกรมทรีทเม้นท์ 6 ขั้นตอนแบบครบวงจร ที่ช่วยขจัดสิ่งสกปรก บำรุงลึก และฟื้นฟูผิวหน้าให้ชุ่มชื้น เปล่งปลั่งตั้งแต่ครั้งแรกที่ทำ
+            เหมาะสำหรับทุกสภาพผิว โดยเฉพาะผู้ที่ต้องการผิวหน้ากระจ่างใสสุขภาพดี
+        </p>
+        <p class="service-price">ราคา: <strong>999 บาท</strong> (ปกติ 1,599)</p>
+        <a href="/services" class="back-link">← กลับไปหน้าบริการทั้งหมด</a>
+    </div>
+</section>
+
+{% endblock %}

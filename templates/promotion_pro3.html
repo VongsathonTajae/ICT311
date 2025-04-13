@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Diode Laser Removehair - TBL Clinic{% endblock %}
+
+{% block content %}
+
+<!-- แบนเนอร์ (Banner) -->
+<section class="banner">
+    <h1>ยกกระชับทุกระดับชั้นผิว</h1>
+    <p>ทุกการรักษา เราพร้อมดูแลด้วยทีมแพทย์ผู้เชี่ยวชาญ</p>
+    <a href="/insert" class="appointment-btn">จองคิวตอนนี้</a>
+</section>
+
+<!-- รายละเอียดบริการ: Diode Laser Removehair -->
+<section class="service-detail-section">
+    <div class="service-detail-container">
+        <h2>Diode Laser Removehair</h2>
+        <p class="service-detail-subtext">จบวงจรขน ผิวเรียบเนียนไร้ขน จบปัญหาขนกวนใจ ลดขนถาวรอย่างอ่อนโยนทุกสภาพผิว</p>
+        <img src="{{ url_for('static', filename='images/Pro3.jpg') }}" alt="Diode Laser Removehair" class="service-image">
+        <p class="service-description">
+            เทคโนโลยี Diode Laser เพื่อกำจัดขนอย่างตรงจุด โดยไม่ทำร้ายผิว ลดการเกิดขนใหม่ พร้อมเผยผิวเรียบลื่นไร้ตอ 
+            เหมาะสำหรับคนที่ต้องการจบปัญหาขนซ้ำซาก และสร้างความมั่นใจในทุกสถานการณ์
+        </p>
+        <p class="service-price">ราคา: <strong>499 บาท</strong> (ปกติ 900)</p>
+        <a href="/services" class="back-link">← กลับไปหน้าบริการทั้งหมด</a>
+    </div>
+</section>
+
+{% endblock %}

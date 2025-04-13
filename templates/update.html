@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>แก้ไขข้อมูลผู้ป่วย</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>แก้ไขข้อมูลผู้ป่วย</h1>
+    <form method="POST">
+        <label>ชื่อ: <input type="text" name="name" value="{{ patient[1] }}" required></label><br>
+        <label>อายุ: <input type="number" name="age" value="{{ patient[2] }}" required></label><br>
+        <label>เบอร์โทร: <input type="text" name="phone" value="{{ patient[3] }}" required></label><br>
+        <label>การรักษา: <input type="text" name="treatment" value="{{ patient[4] }}" required></label><br>
+        <button type="submit">บันทึกการเปลี่ยนแปลง</button>
+    </form>
+</body>
+</html>

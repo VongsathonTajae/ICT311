@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Morpheus8 - TBL Clinic{% endblock %}
+
+{% block content %}
+
+<!-- แบนเนอร์ (Banner) -->
+<section class="banner">
+    <h1>ยกกระชับทุกระดับชั้นผิว</h1>
+    <p>ทุกการรักษา เราพร้อมดูแลด้วยทีมแพทย์ผู้เชี่ยวชาญ</p>
+    <a href="/insert" class="appointment-btn">จองคิวตอนนี้</a>
+</section>
+
+<!-- รายละเอียดบริการ: Morpheus8 -->
+<section class="service-detail-section">
+    <div class="service-detail-container">
+        <h2>Morpheus8 ยกกระชับผิวหน้า</h2>
+        <p class="service-detail-subtext">ผสานคลื่นวิทยุและไมโครนีดลิง เพื่อผิวกระชับ เรียบเนียนอย่างปลอดภัย</p>
+        <img src="{{ url_for('static', filename='images/service_Morpheus8.jpg') }}" alt="Morpheus8" class="service-image">
+        <p class="service-description">
+            Morpheus8 เป็นเทคโนโลยีใหม่ที่รวมพลังของคลื่นวิทยุ (RF) และไมโครนีดลิง (Microneedling) 
+            เพื่อกระตุ้นการสร้างคอลลาเจนใต้ผิวอย่างล้ำลึก เหมาะสำหรับผู้ที่มีปัญหาผิวหย่อนคล้อย รูขุมขนกว้าง 
+            หรือมีริ้วรอยก่อนวัย ทำให้ผิวกลับมากระชับ เต่งตึง และเรียบเนียนอย่างเห็นได้ชัดอย
+        </p>
+        <p class="service-price">ราคาเริ่มต้น: <strong>12,900 บาท</strong></p>
+        <a href="/services" class="back-link">← กลับไปหน้าบริการทั้งหมด</a>
+    </div>
+</section>
+
+{% endblock %}

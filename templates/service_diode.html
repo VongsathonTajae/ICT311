@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Diode Laser - TBL Clinic{% endblock %}
+
+{% block content %}
+
+<!-- แบนเนอร์ (Banner) -->
+<section class="banner">
+    <h1>ยกกระชับทุกระดับชั้นผิว</h1>
+    <p>ทุกการรักษา เราพร้อมดูแลด้วยทีมแพทย์ผู้เชี่ยวชาญ</p>
+    <a href="/insert" class="appointment-btn">จองคิวตอนนี้</a>
+</section>
+
+<!-- รายละเอียดบริการ: Diode Laser -->
+<section class="service-detail-section">
+    <div class="service-detail-container">
+        <h2>Diode Laser</h2>
+        <p class="service-detail-subtext">กำจัดขนอย่างอ่อนโยน ผิวเรียบเนียนอย่างมั่นใจ พร้อมลดการเกิดขนใหม่อย่างมีประสิทธิภาพ</p>
+        <img src="{{ url_for('static', filename='images/service_diode.jpg') }}" alt="Diode Laser" class="service-image">
+        <p class="service-description">
+            เลเซอร์กำจัดขนด้วยเทคโนโลยี Diode ที่ปลอดภัยและเหมาะกับทุกสภาพผิว 
+            สามารถลดการเกิดขนใหม่ กระชับรูขุมขน และช่วยให้ผิวบริเวณที่ทำการรักษาเรียบเนียนขึ้น 
+            โดยไม่ทำร้ายผิวชั้นบน
+        </p>
+        <p class="service-price">ราคาเริ่มต้น: <strong>1,200 บาท</strong></p>
+        <a href="/services" class="back-link">← กลับไปหน้าบริการทั้งหมด</a>
+    </div>
+</section>
+
+{% endblock %}

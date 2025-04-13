@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}ทรีทเม้นท์ - TBL Clinic{% endblock %}
+
+{% block content %}
+
+<!-- แบนเนอร์ (Banner) -->
+<section class="banner">
+    <h1>ยกกระชับทุกระดับชั้นผิว</h1>
+    <p>ทุกการรักษา เราพร้อมดูแลด้วยทีมแพทย์ผู้เชี่ยวชาญ</p>
+    <a href="/insert" class="appointment-btn">จองคิวตอนนี้</a>
+</section>
+
+<!-- รายละเอียดบริการ: ทรีทเม้นท์ -->
+<section class="service-detail-section">
+    <div class="service-detail-container">
+        <h2>ทรีทเม้นท์</h2>
+        <p class="service-detail-subtext">เติมเต็มความชุ่มชื้น คืนความสดใสให้ผิว ดูแลผิวอย่างล้ำลึกให้ผิวแข็งแรง เปล่งประกายจากภายใน</p>
+        <img src="{{ url_for('static', filename='images/service_treatment.jpg') }}" alt="ทรีทเม้นท์" class="service-image">
+        <p class="service-description">
+            ทรีทเม้นท์บำรุงผิวหน้าที่ออกแบบมาเพื่อเติมความชุ่มชื้น ฟื้นฟูผิวที่อ่อนล้า ลดการอักเสบ 
+            พร้อมช่วยปรับสมดุลผิวให้กลับมาแข็งแรง เหมาะสำหรับทุกสภาพผิว โดยเฉพาะผิวแพ้ง่าย
+        </p>
+        <p class="service-price">ราคาเริ่มต้น: <strong>990 บาท</strong></p>
+        <a href="/services" class="back-link">← กลับไปหน้าบริการทั้งหมด</a>
+    </div>
+</section>
+
+{% endblock %}

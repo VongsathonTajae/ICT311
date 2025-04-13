@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}โปรซัมเมอร์ - TBL Clinic{% endblock %}
+
+{% block content %}
+
+<!-- แบนเนอร์ (Banner) -->
+<section class="banner">
+    <h1>ยกกระชับทุกระดับชั้นผิว</h1>
+    <p>ทุกการรักษา เราพร้อมดูแลด้วยทีมแพทย์ผู้เชี่ยวชาญ</p>
+    <a href="/insert" class="appointment-btn">จองคิวตอนนี้</a>
+</section>
+
+<!-- รายละเอียดบริการ: โปรซัมเมอร์ -->
+<section class="service-detail-section">
+    <div class="service-detail-container">
+        <h2>โปรซัมเมอร์</h2>
+        <p class="service-detail-subtext">ซัมเมอร์นี้ อวดผิวเนียนเกลี้ยง หมดกังวลเรื่องขน ด้วยโปรแกรมเลเซอร์ Diode ที่เห็นผลจริง</p>
+        <img src="{{ url_for('static', filename='images/Pro1.jpg') }}" alt="โปรซัมเมอร์" class="service-image">
+        <p class="service-description">
+            แพ็กเกจพิเศษต้อนรับหน้าร้อน! เลเซอร์ Diode กำจัดขนถาวรได้อย่างอ่อนโยนและปลอดภัย เหมาะกับทุกสภาพผิว 
+            ลดการเกิดขนใหม่ พร้อมเผยผิวเนียนเรียบตลอดซัมเมอร์
+        </p>
+        <p class="service-price">ราคา: <strong>499 บาท</strong> (ปกติ 999)</p>
+        <a href="/services" class="back-link">← กลับไปหน้าบริการทั้งหมด</a>
+    </div>
+</section>
+
+{% endblock %}

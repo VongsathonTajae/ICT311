@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}โปรโมชั่น - TBL Clinic{% endblock %}
+
+{% block content %}
+<section class="promotions-section">
+    <div class="promotions-wrapper">
+        <div class="promotions-header">
+            <h2>โปรโมชั่น</h2>
+            <p>พบกับโปรโมชั่นสุดพิเศษสำหรับทุกการรักษา เพื่อผิวสวยในราคาสุดคุ้ม</p>
+        </div>
+
+        <div class="promotion-container">
+            {% for promo in [
+                {'img': 'Pro1.jpg', 'desc': 'ซัมเมอร์นี้อวดผิวเนียนเกลี้ยงด้วยโปรแกรมเลเซอร์ Diode', 'link': '/promotions/Pro1'},
+                {'img': 'Pro2.jpg', 'desc': 'โปรแกรมทรีทเม้นท์หน้า 6 ขั้นตอน อวดหน้าใสรับหน้าสวย', 'link': '/promotions/Pro2'},
+                {'img': 'Pro3.jpg', 'desc': 'โปรแกรมเลเซอร์diode ราคารีวิว 499.-', 'link': '/promotions/Pro3'},
+                {'img': 'Pro4.jpg', 'desc': 'หุ่นปั๊วะ ด้วยโปรแกรม #TBLFATBOMB', 'link': '/promotions/Pro4'}
+            ] %}
+                <div class="promotion-item">
+                    <a href="{{ promo.link }}">
+                        <img src="{{ url_for('static', filename='images/' + promo.img) }}" alt="โปรโมชั่น">
+                    </a>
+                    <p>{{ promo.desc }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ทำการนัดหมาย - TBL Clinic</title>
+    <!-- เรียกใช้ฟ้อนต์ IBM Plex Sans Thai จาก Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>นัดหมาย</h1>
+        <form method="POST" action="/insert" class="appointment-form">
+            <div class="form-group">
+                <label for="name">ชื่อ:</label>
+                <input type="text" name="name" placeholder="กรอกชื่อ" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">อายุ:</label>
+                <input type="number" name="age" placeholder="กรอกอายุ" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">เบอร์โทร:</label>
+                <input type="tel" name="phone" placeholder="กรอกเบอร์โทร" required>
+            </div>
+
+            <div class="form-group">
+                <label for="treatment">บริการ:</label>
+                <input type="text" name="treatment" placeholder="กรอกประเภทบริการ" required>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">ตกลง</button>
+                <a href="/" class="back-link">กลับหน้าแรก</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

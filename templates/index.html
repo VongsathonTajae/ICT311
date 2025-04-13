@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}หน้าแรก - TBL Clinic{% endblock %}
+
+{% block content %}
+
+<!-- แบนเนอร์ -->
+<section class="banner">
+    <h1>ยกกระชับทุกระดับชั้นผิว</h1>
+    <p>ทุกการรักษา เราพร้อมดูแลด้วยทีมแพทย์ผู้เชี่ยวชาญ</p>
+    <a href="/insert" class="appointment-btn">จองคิวตอนนี้</a>
+</section>
+
+<!-- เกี่ยวกับเรา (About Section) -->
+<section id="about" class="about-section">
+    <div class="about-wrapper">
+        <div class="about-text">
+            <h2>เกี่ยวกับ <span style="color: #916459;">TBL Clinic</span></h2>
+            <p>
+                TBL Clinic คลินิกเสริมความงามที่มุ่งเน้นการดูแลผิวพรรณและปรับรูปหน้าอย่างมืออาชีพ 
+                ด้วยเทคโนโลยีทันสมัยและทีมแพทย์ผู้เชี่ยวชาญเฉพาะทาง เราให้บริการแบบครบวงจร 
+                ไม่ว่าจะเป็นการยกกระชับใบหน้า ลดริ้วรอย ฟื้นฟูผิวหน้า และการดูแลสุขภาพผิวในทุกมิติ 
+                เพื่อให้คุณมั่นใจในความสวยแบบปลอดภัย เห็นผลจริง
+            </p>
+        </div>
+        <div class="about-image-container">
+            <img src="{{ url_for('static', filename='images/about.jpg') }}" alt="TBL Clinic" class="about-image">
+        </div>
+    </div>
+</section>
+
+<!-- บริการของเรา (Services Section) -->
+<section id="services" class="services-section">
+    <h2>บริการของเรา</h2>
+    <div class="service-container">
+
+        {% for service in [
+            {'img': 'service_drip.jpg', 'title': 'ดริปวิตามินผิว', 'desc': 'เพิ่มความกระจ่างใสให้ผิว เสริมภูมิคุ้มกัน ฟื้นฟูสุขภาพจากภายใน', 'link': '/services/drip'},
+            {'img': 'service_filler.jpg', 'title': 'ฉีดฟิลเลอร์', 'desc': 'เติมเต็มร่องลึก ปรับรูปหน้าให้ดูอ่อนเยาว์อย่างเป็นธรรมชาติ', 'link': '/services/botox'},
+            {'img': 'service_botox.jpg', 'title': 'ฉีดโบท็อกซ์', 'desc': 'ลดริ้วรอย ยกกระชับ ปรับรูปหน้าเรียว โดยแพทย์ผู้เชี่ยวชาญ', 'link': '/services/filler'},
+            {'img': 'service_morpheus8.jpg', 'title': 'Morpheus8', 'desc': 'เทคโนโลยียกกระชับผิวลึกถึงชั้นใต้ผิว ลดริ้วรอยอย่างมีประสิทธิภาพ', 'link': '/services/Morpheus8'},
+            {'img': 'service_hifu.jpg', 'title': 'HIFU', 'desc': 'ยกกระชับผิวหน้าโดยไม่ต้องผ่าตัด เห็นผลทันทีหลังทำ', 'link': '/services/hifu'},
+            {'img': 'service_diode.jpg', 'title': 'Diode Laser', 'desc': 'เลเซอร์กำจัดขนที่ปลอดภัยและเห็นผลเร็ว ผิวเรียบเนียน', 'link': '/services/diode'},
+            {'img': 'service_treatment.jpg', 'title': 'ทรีทเม้นท์', 'desc': 'บำรุงผิวหน้าอย่างล้ำลึก ช่วยให้ผิวแข็งแรงและเปล่งประกาย', 'link': '/services/treatment'},
+            {'img': 'service_fat.jpg', 'title': 'ฉีดแฟต', 'desc': 'สลายไขมันส่วนเกินเฉพาะจุด ปรับรูปหน้าให้เรียวเล็ก', 'link': '/services/fat'},
+            {'img': 'service_acne.jpg', 'title': 'รักษาสิว', 'desc': 'ดูแลทุกปัญหาสิวอย่างตรงจุด ลดการอักเสบและรอยดำ', 'link': '/services/acne'}
+        ] %}
+            <div class="service-item">
+                {% if service.link %}
+                    <a href="{{ service.link }}">
+                        <img src="{{ url_for('static', filename='images/' + service.img) }}" alt="{{ service.title }}">
+                    </a>
+                {% else %}
+                    <img src="{{ url_for('static', filename='images/' + service.img) }}" alt="{{ service.title }}">
+                {% endif %}
+                <h3>{{ service.title }}</h3>
+                <p>{{ service.desc }}</p>
+            </div>
+        {% endfor %}
+
+    </div>
+</section>
+
+<!-- โปรโมชั่น (Promotion Section) -->
+<section id="promotions" class="promotions-section">
+    <h2>โปรโมชั่น</h2>
+    <p>พบกับโปรโมชั่นสุดพิเศษสำหรับทุกการรักษา เพื่อผิวสวยในราคาสุดคุ้ม</p>
+    <div class="promotion-container">
+        {% for promo in [
+            {'img': 'Pro1.jpg', 'desc': 'ซัมเมอร์นี้อวดผิวเนียนเกลี้ยงด้วยโปรแกรมเลเซอร์ Diode', 'link': '/promotions/Pro1'},
+            {'img': 'Pro2.jpg', 'desc': 'โปรแกรมทรีทเม้นท์หน้า 6 ขั้นตอน อวดหน้าใสรับหน้าสวย', 'link': '/promotions/Pro2'},
+            {'img': 'Pro3.jpg', 'desc': 'โปรแกรมเลเซอร์diode ราคารีวิว 499.-', 'link': '/promotions/Pro3'},
+            {'img': 'Pro4.jpg', 'desc': 'หุ่นปั๊วะ ด้วยโปรแกรม #TBLFATBOMB', 'link': '/promotions/Pro4'}
+        ] %}
+            <div class="promotion-item">
+                <a href="{{ promo.link }}">
+                    <img src="{{ url_for('static', filename='images/' + promo.img) }}" alt="โปรโมชั่น">
+                </a>
+                <p>{{ promo.desc }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- ติดต่อเรา (Contact Section) -->
+<section id="contact" class="contact-section">
+    <h2>ติดต่อเรา</h2>
+    <p>เบอร์โทร: 098-098-0098 | LINE: @TBLCLINIC</p>
+    <p>เปิดทำการทุกวัน 10:00 - 20:00 น.</p>
+    <a href="/insert" class="appointment-btn">นัดหมายตอนนี้</a>
+</section>
+
+{% endblock %}

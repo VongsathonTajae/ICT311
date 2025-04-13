@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}HIFU - TBL Clinic{% endblock %}
+
+{% block content %}
+
+<!-- แบนเนอร์ (Banner) -->
+<section class="banner">
+    <h1>ยกกระชับทุกระดับชั้นผิว</h1>
+    <p>ทุกการรักษา เราพร้อมดูแลด้วยทีมแพทย์ผู้เชี่ยวชาญ</p>
+    <a href="/insert" class="appointment-btn">จองคิวตอนนี้</a>
+</section>
+
+<!-- รายละเอียดบริการ: HIFU -->
+<section class="service-detail-section">
+    <div class="service-detail-container">
+        <h2>HIFU</h2>
+        <p class="service-detail-subtext">ผสานคลื่นเสียงอัลตราซาวด์ เพื่อผิวกระชับได้รูปโดยไม่ต้องผ่าตัด</p>
+        <img src="{{ url_for('static', filename='images/service_hifu.jpg') }}" alt="HIFU" class="service-image">
+        <p class="service-description">
+            เทคโนโลยียกกระชับผิวด้วยคลื่นเสียงอัลตราซาวด์ที่ลงลึกถึงชั้น SMAS 
+            ช่วยกระตุ้นคอลลาเจนและกระชับผิวโดยไม่ต้องผ่าตัด เหมาะสำหรับผู้ที่ต้องการปรับรูปหน้าให้เรียว 
+            ลดเหนียง และยกกระชับในจุดที่หย่อนคล้อย
+        </p>
+        <p class="service-price">ราคาเริ่มต้น: <strong>3,990 บาท</strong></p>
+        <a href="/services" class="back-link">← กลับไปหน้าบริการทั้งหมด</a>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}เกี่ยวกับเรา - TBL Clinic{% endblock %}
+
+{% block content %}
+<section class="about-section">
+    <div class="about-wrapper">
+        <div class="about-text">
+            <h2>เกี่ยวกับ <span style="color: #916459;">TBL Clinic</span></h2>
+            <p>
+                TBL Clinic คลินิกเสริมความงามที่มุ่งเน้นการดูแลผิวพรรณและปรับรูปหน้าอย่างมืออาชีพ 
+                ด้วยเทคโนโลยีทันสมัยและทีมแพทย์ผู้เชี่ยวชาญเฉพาะทาง เราให้บริการแบบครบวงจร 
+                ไม่ว่าจะเป็นการยกกระชับใบหน้า ลดริ้วรอย ฟื้นฟูผิวหน้า และการดูแลสุขภาพผิวในทุกมิติ 
+                เพื่อให้คุณมั่นใจในความสวยแบบปลอดภัย เห็นผลจริง
+            </p>
+        </div>
+        <div class="about-image-container">
+            <img src="{{ url_for('static', filename='images/about.jpg') }}" alt="TBL Clinic" class="about-image">
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}ฉีดแฟต - TBL Clinic{% endblock %}
+
+{% block content %}
+
+<!-- แบนเนอร์ (Banner) -->
+<section class="banner">
+    <h1>ยกกระชับทุกระดับชั้นผิว</h1>
+    <p>ทุกการรักษา เราพร้อมดูแลด้วยทีมแพทย์ผู้เชี่ยวชาญ</p>
+    <a href="/insert" class="appointment-btn">จองคิวตอนนี้</a>
+</section>
+
+<!-- รายละเอียดบริการ: ฉีดแฟต -->
+<section class="service-detail-section">
+    <div class="service-detail-container">
+        <h2>ฉีดแฟต</h2>
+        <p class="service-detail-subtext">สลายไขมันเฉพาะจุดอย่างมีประสิทธิภาพ ปรับรูปหน้าให้เรียวกระชับ เห็นผลชัดเจน โดยไม่ต้องผ่าตัด</p>
+        <img src="{{ url_for('static', filename='images/service_fat.jpg') }}" alt="ฉีดแฟต" class="service-image">
+        <p class="service-description">
+            บริการฉีดสลายไขมันเฉพาะจุดด้วยสารสกัดจากธรรมชาติ ช่วยลดไขมันสะสมบริเวณแก้ม เหนียง 
+            หรือส่วนอื่นๆ ของใบหน้า เห็นผลในระยะเวลาอันสั้น เหมาะสำหรับผู้ที่ต้องการปรับรูปหน้าให้ดูเรียวและกระชับขึ้น
+        </p>
+        <p class="service-price">ราคาเริ่มต้น: <strong>1,590 บาท</strong></p>
+        <a href="/services" class="back-link">← กลับไปหน้าบริการทั้งหมด</a>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}TBL Fat Bomb - TBL Clinic{% endblock %}
+
+{% block content %}
+
+<!-- แบนเนอร์ (Banner) -->
+<section class="banner">
+    <h1>ยกกระชับทุกระดับชั้นผิว</h1>
+    <p>ทุกการรักษา เราพร้อมดูแลด้วยทีมแพทย์ผู้เชี่ยวชาญ</p>
+    <a href="/insert" class="appointment-btn">จองคิวตอนนี้</a>
+</section>
+
+<!-- รายละเอียดบริการ: TBL Fat Bomb -->
+<section class="service-detail-section">
+    <div class="service-detail-container">
+        <h2>TBL Fat Bomb</h2>
+        <p class="service-detail-subtext">สลายไขมันเฉพาะจุด เร่งผลลัพธ์หุ่นเฟิร์มทันใจ ไม่ต้องพักฟื้น </p>
+        <img src="{{ url_for('static', filename='images/Pro4.jpg') }}" alt="TBL Fat Bomb" class="service-image">
+        <p class="service-description">
+            โปรแกรม Fat Bomb ฉีดสลายไขมันสูตรเฉพาะจาก TBL Clinic เน้นย้ำผลลัพธ์ที่ชัดเจน เร่งกระบวนการสลายไขมัน 
+            เหมาะกับผู้ที่มีไขมันสะสมเฉพาะจุด เช่น แก้ม เหนียง ต้นแขน หน้าท้อง ทำโดยแพทย์ผู้เชี่ยวชาญ
+        </p>
+        <p class="service-price">ราคา: <strong>2,999 บาท</strong> / ครั้ง</p>
+        <a href="/services" class="back-link">← กลับไปหน้าบริการทั้งหมด</a>
+    </div>
+</section>
+
+{% endblock %}

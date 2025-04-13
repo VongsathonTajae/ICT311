@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ลงทะเบียน - TBL Clinic</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'IBM Plex Sans Thai', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #7e4b3a;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+        .form-actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .submit-btn {
+            background-color: #7e4b3a;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #5c3327;
+        }
+        .back-home {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #7e4b3a;
+            font-weight: 500;
+        }
+        .back-home:hover {
+            text-decoration: underline;
+        }
+        .flash-message {
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+        .flash-message.success { background-color: #d4edda; color: #155724; }
+        .flash-message.error { background-color: #f8d7da; color: #721c24; }
+        .flash-message.info { background-color: #d1ecf1; color: #0c5460; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>ลงทะเบียนผู้ใช้ใหม่</h1>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="flash-message {{ category }}">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
+        <form method="POST">
+            <!-- ข้อมูลส่วนตัว -->
+            <div class="form-group">
+                <label for="full_name">ชื่อ - นามสกุล</label>
+                <input type="text" id="full_name" name="full_name" required>
+            </div>
+            <div class="form-group">
+                <label for="birth_date">วันเกิด</label>
+                <input type="date" id="birth_date" name="birth_date" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">เพศ</label>
+                <select id="gender" name="gender" required>
+                    <option value="">-- กรุณาเลือกเพศ --</option>
+                    <option value="หญิง">หญิง</option>
+                    <option value="ชาย">ชาย</option>
+                    <option value="อื่นๆ">อื่นๆ</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="phone">หมายเลขโทรศัพท์</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="address">ที่อยู่ที่ติดต่อ</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+
+            <!-- ข้อมูลการเข้าสู่ระบบ -->
+            <div class="form-group">
+                <label for="email">อีเมล</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">รหัสผ่าน</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">ยืนยันรหัสผ่าน</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">ลงทะเบียน</button>
+            </div>
+        </form>
+
+        <a href="/" class="back-home">← กลับหน้าหลัก</a>
+        <p style="margin-top: 20px; text-align: center;">
+            มีบัญชีอยู่แล้ว? <a href="{{ url_for('login') }}">เข้าสู่ระบบ</a>
+        </p>
+    </div>
+</body>
+</html>

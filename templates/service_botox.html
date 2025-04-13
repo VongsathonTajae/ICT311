@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}ฉีดโบท็อกซ์ - TBL Clinic{% endblock %}
+
+{% block content %}
+
+<!-- แบนเนอร์ (Banner) -->
+<section class="banner">
+    <h1>ยกกระชับทุกระดับชั้นผิว</h1>
+    <p>ทุกการรักษา เราพร้อมดูแลด้วยทีมแพทย์ผู้เชี่ยวชาญ</p>
+    <a href="/insert" class="appointment-btn">จองคิวตอนนี้</a>
+</section>
+
+<!-- รายละเอียดบริการ: ฉีดโบท็อกซ์ -->
+<section class="service-detail-section">
+    <div class="service-detail-container">
+        <h2>ฉีดโบท็อกซ์</h2>
+        <p class="service-detail-subtext">ลดริ้วรอย ยกกระชับผิวหน้า คืนความอ่อนเยาว์อย่างเป็นธรรมชาติ</p>
+        <img src="{{ url_for('static', filename='images/service_botox.jpg') }}" alt="ฉีดโบท็อกซ์" class="service-image">
+        <p class="service-description">
+            ลดเลือนริ้วรอย ยกกระชับ ปรับรูปหน้าให้เรียวสวยอย่างเป็นธรรมชาติด้วยโบท็อกซ์แท้จากแหล่งที่เชื่อถือได้ 
+            เหมาะสำหรับผู้ที่มีริ้วรอยบนหน้าผาก รอบดวงตา หรือกรามใหญ่ 
+            โดยแพทย์ผู้เชี่ยวชาญที่มีประสบการณ์ เพื่อความปลอดภัยและผลลัพธ์ที่น่าพึงพอใจ
+        </p>
+        <p class="service-price">ราคาเริ่มต้น: <strong>3,990 บาท</strong></p>
+        <a href="/services" class="back-link">← กลับไปหน้าบริการทั้งหมด</a>
+    </div>
+</section>
+
+{% endblock %}
